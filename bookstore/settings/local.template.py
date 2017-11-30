@@ -12,6 +12,7 @@ TEMPLATE_DEBUG = DEBUG
 COMPRESS_ENABLED = True
 
 
+'''
 DATABASES = {
     'default': {
         # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
@@ -22,6 +23,13 @@ DATABASES = {
         'PASSWORD': 'dev_p@ssword',
         'HOST': 'localhost',
         'PORT': '',
+    }
+}
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
