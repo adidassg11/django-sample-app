@@ -98,6 +98,7 @@ LOCAL_APPS = (
 EXTERNAL_APPS = (
     'django_extensions',
     'compressor',
+    'ddtrace.contrib.django',
 )
 
 # the order is important!
@@ -217,5 +218,10 @@ LOGGING = {
             'propagate': True,
         },
     }
+}
+
+DATADOG_TRACE = {
+    'DEFAULT_SERVICE': 'my-django-app',
+    'TAGS': {'env': 'production'},
 }
 
